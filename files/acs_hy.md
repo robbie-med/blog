@@ -1,7 +1,3 @@
----
-dg-home: false
-dg-publish: true
----
 
  1. **Acute Coronary Syndrome.md**
 ```
