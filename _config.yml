@@ -1,2 +1,48 @@
-title: robbiemed
-theme: minima
+title: "robbiemed's notes"
+description: "Dotphrases, high-yield pearls, and resources for clinical care"
+baseurl: ""  # Leave blank if using GitHub Pages default repo root
+url: "https://robbie-med.github.io"  # Replace with your actual username.github.io
+
+theme: minima  # Use GitHub-supported theme or switch to custom later
+markdown: kramdown
+
+# Enable rendering from folders (collections)
+collections:
+  dotphrases:
+    output: true
+    permalink: /dotphrases/:path/
+  high_yield:
+    output: true
+    permalink: /high_yield/:path/
+  conditions:
+    output: true
+    permalink: /conditions/:path/
+
+# Include any folders that aren't auto-processed
+include:
+  - dotphrases
+  - high_yield
+  - conditions
+  - files
+
+defaults:
+  - scope:
+      path: ""
+      type: "dotphrases"
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: "high_yield"
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: "conditions"
+    values:
+      layout: default
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
